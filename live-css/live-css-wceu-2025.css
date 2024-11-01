@@ -24,7 +24,3 @@
  *  --wp--preset--font-family--body: "Inter", sans-serif;
  *  --wp--preset--font-family--heading: Cardo;
  */
-
-.cl-test {
-    background-color: var(--wp--preset--color--custom-orange-primary);
-}
