@@ -31,6 +31,7 @@ Make one of these actions:
 * Don't use post IDs as selectors because they can change between development environment and production. Instead, use the slug; e.g. `body.post-slug-call-for-volunteers`, `body.page-slug-accommodation`.
 * If possible, create a class and use it on the element `.button-action` because we can reuse these classes in several elements and change code only one.
 * Use [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/ "") if possible.
+* Use CSS vars instead of direct colors, fonts or sizes if possible. Use `background-color: var(--wp--preset--color--custom-orange-primary);` instead of `background-color: #f04614;`
 * Use Slack channel `#team-website` if you have any doubts.
-* Use [GitHub Issues](https://github.com/wceu/wceu2025/issues) to add new request, issues, etc. and ping users on the Issue
+* Use [GitHub Issues](https://github.com/wceu/wceu2025/issues) to add new request, issues, etc. and ping users on the Issue.
 * Have fun :)
