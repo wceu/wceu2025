@@ -1,5 +1,26 @@
-/*** This CSS woill be included in WordCamp Europe 2025 every time
- * you will make a repository commit and reload remote CSS from website
- * admin view (Appaerance -> Remote CSS) or visiting
- *
- */
+/***
+ * This CSS will be included in WordCamp Europe 2025 every time
+ * you will make a repository commit and reload remote CSS from the website
+ * admin view (Appearance -> Remote CSS) or visiting
+ * https://europe.wordcamp.org/2025/wp-admin/admin-ajax.php?action=wcrcss_webhook
+ * https://europe.wordcamp.org/2025/ CSS will be synched with this file
+ *
+ * Development environment is on https://wceutest.wordcamp.org/2025 and also includes
+ * this remote CSS. Update CSS from the website admin view (Appearance -> Remote CSS)
+ * or visiting https://wceutest.wordcamp.org/2025/wp-admin/admin-ajax.php?action=wcrcss_webhook
+
+ * Don't use post IDs as selectors because they can change between development environment and production.
+ * Instead, use the slug; e.g. body.post-slug-call-for-volunteers, body.page-slug-accommodation or better,
+ * create a class and use it on the element because we can reuse these classes.
+ *
+ * CSS vars defined on website Theme (vars values can change on the development process):
+ *  --wp--preset--color--custom-orange-primary: #f04614;
+ *  --wp--preset--color--custom-light-blue-primary: #1ec8dc;
+ *  --wp--preset--color--custom-black-primary: #00000f;
+ *  --wp--preset--color--custom-pink-secondary: #faaff0;
+ *  --wp--preset--color--custom-yellow-secondary: #ffe65f;
+ *  --wp--preset--color--custom-white-secondary: #f5f5f5;
+ *
+ *  --wp--preset--font-family--body: "Inter", sans-serif;
+ *  --wp--preset--font-family--heading: Cardo;
+ */
