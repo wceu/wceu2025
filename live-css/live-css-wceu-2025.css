@@ -13,7 +13,7 @@
  * Instead, use the slug; e.g. body.post-slug-call-for-volunteers, body.page-slug-accommodation or better,
  * create a class and use it on the element because we can reuse these classes.
  *
- * CSS vars defined on website Theme (vars values can change on the development process):
+ * CSS vars defined on website Theme (vars values can change during the development process):
  *  --wp--preset--color--custom-orange-primary: #f04614;
  *  --wp--preset--color--custom-light-blue-primary: #1ec8dc;
  *  --wp--preset--color--custom-black-primary: #00000f;
