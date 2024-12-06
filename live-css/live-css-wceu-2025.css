@@ -74,7 +74,7 @@
 	height: var( --height__third-row ) !important; /* we need important, because the spacer has a fixed height */
 }
 
-/* Styles for smaller screens */
+/* Styles for smaller screens. Does not need to be 799, can be somethin else in the future. */
 @media screen and (max-width: 799px) {
 	.wp-block-group:has(>.blend-element) {
 		--width__blend-element: clamp( 40px, calc(40px + 15vw), 160px ); /* 0 - 800 */
