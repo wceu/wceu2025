@@ -28,9 +28,7 @@
 
 /* Styles for the Header Intro with Blend Element */
 
-.wp-block-group:has(>.blend-element) {
-	position: relative; /* the blend is element is absolute, so we need relative here */
-
+:root {
 	/*
 		Some custom properties for sizes, so we don't need to repeat the values.
 		Most sizes use clamp() to have a min and max value, and a value that grows with the viewport width.
@@ -45,6 +43,10 @@
 	--height__third-row: clamp( 20px, calc( 20px + 2vw ), 40px ); /* 0 - 1000 */
 
 	--width__second-row-first-col: clamp( 200px, calc( 80px + 60vw ), 800px ); /* 200 - 1200 */
+}
+
+.wp-block-group:has(>.blend-element) {
+	position: relative; /* the blend is element is absolute, so we need relative here */
 }
 
 /* The blend element, which overlays some of the colors */
