@@ -30,19 +30,23 @@
 
 :root {
 	/*
-		Some custom properties for sizes, so we don't need to repeat the values.
-		Most sizes use clamp() to have a min and max value, and a value that grows with the viewport width.
-		The values in comments are the viewport width range where the value is applied.
-		e.g 40px for 1200px screen, and 400px for 2400px screen. The inbetwen values are calculated by the browser.
-	 */
+	Some custom properties for sizes, so we don't need to repeat the values.
+	Most sizes use clamp() to have a min and max value, and a value that grows with the viewport width.
+	The values in comments are the viewport width range where the value is applied.
+	e.g 40px for 1200px screen, and 400px for 2400px screen. The inbetwen values are calculated by the browser.
 
-	--width__blend-element: clamp( 40px, calc(-320px + 30vw), 400px ); /* 1200 - 2400 */
+	---
+
+	Remote CSS seems to remove custom properties, so we only need them here as reference.
+
+  	--width__blend-element: clamp( 40px, calc(-320px + 30vw), 400px ); screen size: 1200 - 2400
 	--height__blend-element: 100%;
 
-	--height__second-row: clamp( 60px, calc( 60px + 7.5vw ), 180px ); /* 0 - 1600 */
-	--height__third-row: clamp( 20px, calc( 20px + 2vw ), 40px ); /* 0 - 1000 */
+	--height__second-row: clamp( 60px, calc( 60px + 7.5vw ), 180px ); screen size: 0 - 1600
+	--height__third-row: clamp( 20px, calc( 20px + 2vw ), 40px ); screen size: 0 - 1000
 
-	--width__second-row-first-col: clamp( 200px, calc( 80px + 60vw ), 800px ); /* 200 - 1200 */
+	--width__second-row-first-col: clamp( 200px, calc( 80px + 60vw ), 800px ); screen size: 200 - 1200
+	 */
 }
 
 .wp-block-group:has(>.blend-element) {
@@ -56,34 +60,42 @@
 	bottom: 0;
 	left: 0;
 	padding: 0;
-	width: var( --width__blend-element );
-	height: var( --height__blend-element );
+	width: clamp( 40px, calc(-320px + 30vw), 400px );
+	height: 100%;
 	background: #1ec8dc;
 	mix-blend-mode: multiply;
 }
 
+/* Use the same color for the header, as is used in the blend element */
+body:has(.blend-element.has-custom-pink-secondary-background-color) header.wp-block-template-part > .wp-block-group.has-background {
+	background: linear-gradient( 90deg, var( --wp--preset--color--custom-pink-secondary ) 45% , var( --wp--preset--color--base-2 ) 45% ) !important;
+}
+body:has(.blend-element.has-custom-light-blue-primary-background-color) header.wp-block-template-part > .wp-block-group.has-background {
+	background: linear-gradient( 90deg, var( --wp--preset--color--custom-light-blue-primary ) 45% , var( --wp--preset--color--base-2 ) 45% ) !important;
+}
+
 .second-row .wp-block-spacer {
-	height: var( --height__second-row ) !important; /* we need important, because the spacer has a fixed height */
+	height: clamp( 60px, calc( 60px + 7.5vw ), 180px ) !important; /* we need important, because the spacer has a fixed height */
 }
 
 .second-row .wp-block-column:first-child {
 	flex-basis: auto !important;
 	flex-grow: 0 !important;
-	width: var( --width__second-row-first-col ) !important; /* we need important, because the column has a fixed width */
+	width: clamp( 200px, calc( 80px + 60vw ), 800px ) !important; /* we need important, because the column has a fixed width */
 }
 
 .third-row .wp-block-spacer {
-	height: var( --height__third-row ) !important; /* we need important, because the spacer has a fixed height */
+	height: clamp( 20px, calc( 20px + 2vw ), 40px ) !important; /* we need important, because the spacer has a fixed height */
 }
 
 /* Styles for smaller screens. Does not need to be 799, can be somethin else in the future. */
 @media screen and (max-width: 799px) {
-	.wp-block-group:has(>.blend-element) {
-		--width__blend-element: clamp( 40px, calc(40px + 15vw), 160px ); /* 0 - 800 */
-		--height__blend-element: calc( var( --height__second-row ) + ( var( --height__second-row ) / 3 * 2 ) + var( --height__third-row ) );
+	.blend-element {
+		width: clamp( 40px, calc(40px + 15vw), 160px );
+		height: calc( clamp( 60px, calc( 60px + 7.5vw ), 180px ) + ( clamp( 60px, calc( 60px + 7.5vw ), 180px ) / 3 * 2 ) + clamp( 20px, calc( 20px + 2vw ), 40px ) )
 	}
 	.first-row > .wp-block-group {
-		padding-top: calc( var( --height__second-row ) / 2 );
-		padding-bottom: var( --height__second-row );
+		padding-top: calc( clamp( 60px, calc( 60px + 7.5vw ), 180px ) / 2 );
+		padding-bottom: clamp( 60px, calc( 60px + 7.5vw ), 180px );
 	}
 }
