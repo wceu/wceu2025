@@ -102,3 +102,96 @@ body:has(.blend-element.has-custom-orange-primary-background-color) header.wp-bl
 		padding-bottom: clamp( 60px, calc( 60px + 7.5vw ), 180px );
 	}
 }
+
+/* Additional Heading styles */
+
+h1.wc25-medium {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+h1.wc25-small {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+h2.wc25-medium {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+h2.wc25-small {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h3.wc25-medium {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h3.wc25-small {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h4.wc25-medium {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h4.wc25-small {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+h5.wc25-medium {
+  font-size: 1.75rem;
+  line-height: 1.29;
+}
+
+h5.wc25-small {
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+h6.wc25-medium {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+h6.wc25-small {
+  font-size: 1.125rem;
+  line-height: 1.33;
+}
+
+/* Additional paragraph styles */
+
+p.wc25-p-small {
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+p.wc25-p-default {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p.wc25-p-large {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+p.wc25-p-large-small {
+  font-size: 1.125rem;
+  line-height: 1.44;
+}
+
+p.wc25-p-large-bold {
+  font-weight: 700;
+}
+
+p.wc25-p-large-bold-small {
+  font-size: 1.125rem;
+  line-height: 1.44;
+}
