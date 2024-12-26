@@ -465,66 +465,136 @@ p.wc25-p-large-bold-small {
 /* END Camptix block - tickets page */
 
 
-/* START of the Organizers */
+/*
+	START of the Organizers.
+	For the usage with the (old) "Organizer list with bio (Organizers List)" block.
+ */
 
 .type-wcb_organizer {
-    container-type: inline-size; /* So we can use cqi for sizing (1% of a query container's inline size) */
+	container-type: inline-size; /* So we can use cqi for sizing (1% of a query container's inline size) */
 }
 
 .type-wcb_organizer figure {
-    width: 100% !important; /* Because we need to set a size on the avatar, we need to override it */
-    height: auto !important;
-    aspect-ratio: 1 / 1; /* Keep it square */
-    margin-bottom: 20cqi; /* 20cqi is 20% of the container's inline size (width). Double the balur of the border-bottom for improved spacing. */
+	width: 100% !important; /* Because we need to set a size on the avatar, we need to override it */
+	height: auto !important;
+	aspect-ratio: 1 / 1; /* Keep it square */
+	margin-bottom: 20cqi; /* 20cqi is 20% of the container's inline size (width). Double the value of the border-bottom for improved spacing. */
 }
 .type-wcb_organizer figure {
-    position: relative; /* So we can use absolute positioning for the pseudo-elements */
-    border-bottom: 10cqi solid var( --wp--preset--color--custom-yellow-secondary );  /* 10cqi is 10% of the container's inline size (width). Sames as the following pseudo-elements */
+	position: relative; /* So we can use absolute positioning for the pseudo-elements */
+	border-bottom: 10cqi solid var( --wp--preset--color--custom-yellow-secondary );  /* 10cqi is 10% of the container's inline size (width). Sames as the following pseudo-elements */
 }
 
 .type-wcb_organizer figure::before,
 .type-wcb_organizer figure::after {
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    height: 10cqi; /* 10cqi is 10% of the container's inline size (width) */
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	height: 10cqi; /* 10cqi is 10% of the container's inline size (width) */
 }
 .type-wcb_organizer figure::before {
-    left: 0;
-    width: 15cqi;
-    background: var( --wp--preset--color--custom-yellow-secondary );
+	left: 0;
+	width: 15cqi;
+	background: var( --wp--preset--color--custom-yellow-secondary );
 }
 .type-wcb_organizer figure::after {
-    right: 0;
-    width: 25cqi;
-    bottom: calc( -2 * 10cqi );
-    background: var( --wp--preset--color--custom-light-blue-primary );
+	right: 0;
+	width: 25cqi;
+	bottom: calc( -2 * 10cqi );
+	background: var( --wp--preset--color--custom-light-blue-primary );
 }
 
 .type-wcb_organizer img {
-    display: block; /* Make sure the image is block-level and no invisible margin is applied */
+	display: block; /* Make sure the image is block-level and no invisible margin is applied */
 }
 
 /* The team lead (First person in the Loop) */
 .type-wcb_organizer:first-child figure {
-    border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
+	border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
 }
 .type-wcb_organizer:first-child figure:before {
-    background-color: var( --wp--preset--color--custom-pink-secondary );
+	background-color: var( --wp--preset--color--custom-pink-secondary );
 }
 .type-wcb_organizer:first-child figure:after {
-    background-color: var( --wp--preset--color--custom-orange-primary );
+	background-color: var( --wp--preset--color--custom-orange-primary );
 }
 
-/* The Lead Organizes (Needs the classname "team-lead-organizers" on the Loop some parent block */
+/* The Lead Organizes (Needs the classname "team-lead-organizers" on the Loop or some parent block */
 .team-lead-organizers .type-wcb_organizer figure {
-    border-bottom-color: var( --wp--preset--color--custom-orange-primary );
+	border-bottom-color: var( --wp--preset--color--custom-orange-primary );
 }
 .team-lead-organizers .type-wcb_organizer figure:before {
-    background-color: var( --wp--preset--color--custom-orange-primary );
+	background-color: var( --wp--preset--color--custom-orange-primary );
 }
 .team-lead-organizers .type-wcb_organizer figure:after {
-    background-color: var( --wp--preset--color--custom-light-blue-primary );
+	background-color: var( --wp--preset--color--custom-light-blue-primary );
+}
+
+/* END of the Organizers */
+
+/*
+	START of the Organizers.
+	For the usage with the (new) "Organizers" block.
+*/
+
+.wordcamp-organizer {
+	container-type: inline-size; /* So we can use cqi for sizing (1% of a query container's inline size) */
+}
+
+.wordcamp-organizer .wordcamp-image__avatar-container {
+	margin-bottom: 20cqi; /* 20cqi is 20% of the container's inline size (width). Double the value of the border-bottom for improved spacing. */
+}
+.wordcamp-organizer .wordcamp-image__avatar-container img {
+	display: block /* Make sure the image is block-level and no invisible margin is applied */;
+	width: 100% !important; /* Because we need to set a size on the avatar, we need to override it */
+	height: auto !important;
+	aspect-ratio: 1 / 1; /* Keep it square */
+}
+
+.wordcamp-organizer .wordcamp-image__avatar-container {
+	position: relative; /* So we can use absolute positioning for the pseudo-elements */
+	border-bottom: 10cqi solid var( --wp--preset--color--custom-yellow-secondary );  /* 10cqi is 10% of the container's inline size (width). Sames as the following pseudo-elements */
+}
+
+.wordcamp-organizer .wordcamp-image__avatar-container::before,
+.wordcamp-organizer .wordcamp-image__avatar-container::after {
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	height: 10cqi; /* 10cqi is 10% of the container's inline size (width). e.g the image is 400px width, so the height of the color element is 40px. */
+}
+.wordcamp-organizer .wordcamp-image__avatar-container::before {
+	left: 0;
+	width: 15cqi;
+	background: var( --wp--preset--color--custom-yellow-secondary );
+}
+.wordcamp-organizer .wordcamp-image__avatar-container::after {
+	right: 0;
+	width: 25cqi;
+	bottom: calc( -2 * 10cqi );
+	background: var( --wp--preset--color--custom-light-blue-primary );
+}
+/* The team lead (First person in the list) */
+.wordcamp-organizer:first-child .wordcamp-image__avatar-container {
+	border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
+}
+.wordcamp-organizer:first-child .wordcamp-image__avatar-container:before {
+	background-color: var( --wp--preset--color--custom-pink-secondary );
+}
+.wordcamp-organizer:first-child .wordcamp-image__avatar-container:after {
+	background-color: var( --wp--preset--color--custom-orange-primary );
+}
+
+
+/* The Lead Organizes (Needs the classname "team-lead-organizers" on the list or some parent block */
+.team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container {
+	border-bottom-color: var( --wp--preset--color--custom-orange-primary );
+}
+.team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container:before {
+	background-color: var( --wp--preset--color--custom-orange-primary );
+}
+.team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container:after {
+	background-color: var( --wp--preset--color--custom-light-blue-primary );
 }
 
 /* END of the Organizers */
