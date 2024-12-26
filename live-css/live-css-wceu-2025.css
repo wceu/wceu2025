@@ -204,21 +204,21 @@ p.wc25-p-large-bold-small {
 	.tix_tickets_table table, thead, tbody, th, td, tr {
 		display: block;
 	}
-	
+
 	/* Hide table headers (but not display: none;, for accessibility) */
 	thead tr {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
-	
+
 	td {
 	/* Behave  like a "row" */
 		border: 0;
 		position: relative;
 		padding-left: 50%;
 	}
-	
+
 	td:before {
 	/* Now like a table header */
 		position: absolute;
@@ -229,13 +229,13 @@ p.wc25-p-large-bold-small {
 		padding-right: 10px;
 		white-space: nowrap;
 	}
-	
+
 	.tix-tickets-list .tix-column-description {
 		padding: 0 !important;
 		border: 0;
 		text-align: center !important;
 	}
-	
+
 	.tix-js .tix_tickets_table tbody .tix-ticket-title,
 		  .tix-js .tix_tickets_table tbody .tix-column-description {
 		font-weight: bold;
@@ -244,13 +244,13 @@ p.wc25-p-large-bold-small {
 		background: #86b3d7;
 		padding: 10px 20px;
 	}
-	
+
 	/*-- responsive ticket form --*/
 	.tix-ticket-form td.tix-left,
 					.tix-private-form td.tix-left,
 					.tix-attendee-form td.tix-left,
 					.tix-receipt-form td.tix-left,
-					.tix_invoice_table td.tix-left, 
+					.tix_invoice_table td.tix-left,
 					.tix-ticket-form td.tix-right,
 					.tix-private-form td.tix-right,
 					.tix-attendee-form td.tix-right,
@@ -258,20 +258,20 @@ p.wc25-p-large-bold-small {
 					.tix_invoice_table td.tix-right {
 		width: 90% !important;
 	}
-	
+
 	.tix-js .tix_tickets_table.tix-attendee-form .tix-right {
 		padding-top: .5em !important;
 	}
-	
+
 	.tix-js .tix_tickets_table.tix-attendee-form .tix-left,
 					.tix-js .camptix-invoice-toggle-wrapper .camptix-invoice-details .tix-left {
 		text-align: left !important;
 	}
-	
+
 	.tix-js .tix_tickets_table.tix-attendee-form .tix-right {
 		padding-left: 20px;
 	}
-	
+
 	.tix-ticket-form input[type="text"],
 					.tix-ticket-form input[type="email"],
 					.tix-ticket-form input[type="url"],
@@ -294,20 +294,20 @@ p.wc25-p-large-bold-small {
 					.tix_invoice_table textarea {
 		width: 100% !important;
 	}
-	
+
 	tix-order-summary .tix-column-description {
 		width: 80% !important;
 	}
-	
+
 	.tix-js .tix_tickets_table.tix-attendee-form tbody td,
 					.tix_tickets_table.tix-attendee-form tbody th {
 		padding: 5px 0 !important;
 	}
-	
+
 	.tix-attendee-form tr {
 		padding-bottom: 40px !important;
 	}
-	
+
 	.tix-left {
 		font-weight: 600 !important;
 	}
@@ -463,3 +463,68 @@ p.wc25-p-large-bold-small {
 }
 
 /* END Camptix block - tickets page */
+
+
+/* START of the Organizers */
+
+.type-wcb_organizer {
+    container-type: inline-size; /* So we can use cqi for sizing (1% of a query container's inline size) */
+}
+
+.type-wcb_organizer figure {
+    width: 100% !important; /* Because we need to set a size on the avatar, we need to override it */
+    height: auto !important;
+    aspect-ratio: 1 / 1; /* Keep it square */
+    margin-bottom: 20cqi; /* 20cqi is 20% of the container's inline size (width). Double the balur of the border-bottom for improved spacing. */
+}
+.type-wcb_organizer figure {
+    position: relative; /* So we can use absolute positioning for the pseudo-elements */
+    border-bottom: 10cqi solid var( --wp--preset--color--custom-yellow-secondary );  /* 10cqi is 10% of the container's inline size (width). Sames as the following pseudo-elements */
+}
+
+.type-wcb_organizer figure::before,
+.type-wcb_organizer figure::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 10cqi; /* 10cqi is 10% of the container's inline size (width) */
+}
+.type-wcb_organizer figure::before {
+    left: 0;
+    width: 15cqi;
+    background: var( --wp--preset--color--custom-yellow-secondary );
+}
+.type-wcb_organizer figure::after {
+    right: 0;
+    width: 25cqi;
+    bottom: calc( -2 * 10cqi );
+    background: var( --wp--preset--color--custom-light-blue-primary );
+}
+
+.type-wcb_organizer img {
+    display: block; /* Make sure the image is block-level and no invisible margin is applied */
+}
+
+/* The team lead (First person in the Loop) */
+.type-wcb_organizer:first-child figure {
+    border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
+}
+.type-wcb_organizer:first-child figure:before {
+    background-color: var( --wp--preset--color--custom-pink-secondary );
+}
+.type-wcb_organizer:first-child figure:after {
+    background-color: var( --wp--preset--color--custom-orange-primary );
+}
+
+/* The Lead Organizes (Needs the classname "team-lead-organizers" on the Loop some parent block */
+.team-lead-organizers .type-wcb_organizer figure {
+    border-bottom-color: var( --wp--preset--color--custom-orange-primary );
+}
+.team-lead-organizers .type-wcb_organizer figure:before {
+    background-color: var( --wp--preset--color--custom-orange-primary );
+}
+.team-lead-organizers .type-wcb_organizer figure:after {
+    background-color: var( --wp--preset--color--custom-light-blue-primary );
+}
+
+/* END of the Organizers */
