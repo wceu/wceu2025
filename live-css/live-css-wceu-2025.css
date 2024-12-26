@@ -474,11 +474,11 @@ p.wc25-p-large-bold-small {
 	width: 100% !important; /* Because we need to set a size on the avatar, we need to override it */
 	height: auto !important;
 	aspect-ratio: 1 / 1; /* Keep it square */
-	margin-bottom: calc( 2 * clamp( 10px, calc( 0px + 2.5vw ), 40px ) ); /* 2 times the size of the border-bottom of wordcamp-image__avatar-container */
+	margin-bottom: calc( 2 * clamp( 16px, calc( 8px + 2vw ), 40px ) ); /* 2 times the size of the border-bottom of wordcamp-image__avatar-container */
 }
 .type-wcb_organizer figure {
 	position: relative; /* So we can use absolute positioning for the pseudo-elements */
-	border-bottom: clamp( 10px, calc( 0px + 2.5vw ), 40px ) solid var( --wp--preset--color--custom-yellow-secondary ); /* 10px on screens with 400px. 40px on screens with 1600px */;
+	border-bottom: clamp( 16px, calc( 8px + 2vw ), 40px ) solid var( --wp--preset--color--custom-yellow-secondary ); /* 16px on screens with 400px. 40px on screens with 1600px */;
 }
 
 .type-wcb_organizer figure::before,
@@ -486,7 +486,7 @@ p.wc25-p-large-bold-small {
 	content: " ";
 	position: absolute;
 	bottom: 0;
-	height: clamp( 10px, calc( 0px + 2.5vw ), 40px ); /* 10px on screens with 400px. 40px on screens with 1600px */
+	height: clamp( 16px, calc( 8px + 2vw ), 40px ); /* 16px on screens with 400px. 40px on screens with 1600px */
 }
 .type-wcb_organizer figure::before {
 	left: 0;
@@ -496,7 +496,7 @@ p.wc25-p-large-bold-small {
 .type-wcb_organizer figure::after {
 	right: 0;
 	width: 25%;
-	bottom: calc( -2 * clamp( 10px, calc( 0px + 2.5vw ), 40px ) );
+	bottom: calc( -2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
 	background: var( --wp--preset--color--custom-light-blue-primary );
 }
 
@@ -550,7 +550,7 @@ p.wc25-p-large-bold-small {
 }
 
 .wordcamp-organizer .wordcamp-image__avatar-container {
-	margin-bottom: calc( 2 * clamp( 10px, calc( 0px + 2.5vw ), 40px ) ); /* 2 times the size of the border-bottom of wordcamp-image__avatar-container */
+	margin-bottom: calc( 2 * clamp( 16px, calc( 8px + 2vw ), 40px ) ); /* 2 times the size of the border-bottom of wordcamp-image__avatar-container */
 }
 .wordcamp-organizer .wordcamp-image__avatar-container img {
 	display: block /* Make sure the image is block-level and no invisible margin is applied */;
@@ -562,7 +562,7 @@ p.wc25-p-large-bold-small {
 .wordcamp-organizer .wordcamp-image__avatar-container {
 	order: 1; /* Show the avatar of the organizer before the name */
 	position: relative; /* So we can use absolute positioning for the pseudo-elements */
-	border-bottom: clamp( 10px, calc( 0px + 2.5vw ), 40px ) solid var( --wp--preset--color--custom-yellow-secondary ); /* 10px on screens with 400px. 40px on screens with 1600px */;
+	border-bottom: clamp( 16px, calc( 8px + 2vw ), 40px ) solid var( --wp--preset--color--custom-yellow-secondary ); /* 16px on screens with 400px. 40px on screens with 1600px */;
 }
 
 .wordcamp-organizer .wordcamp-image__avatar-container::before,
@@ -570,7 +570,7 @@ p.wc25-p-large-bold-small {
 	content: " ";
 	position: absolute;
 	bottom: 0;
-	height: clamp( 10px, calc( 0px + 2.5vw ), 40px ); /* 10px on screens with 400px. 40px on screens with 1600px */
+	height: clamp( 16px, calc( 8px + 2vw ), 40px ); /* 16px on screens with 400px. 40px on screens with 1600px */
 }
 .wordcamp-organizer .wordcamp-image__avatar-container::before {
 	left: 0;
@@ -580,7 +580,7 @@ p.wc25-p-large-bold-small {
 .wordcamp-organizer .wordcamp-image__avatar-container::after {
 	right: 0;
 	width: 25%;
-	bottom: calc( -2 * clamp( 10px, calc( 0px + 2.5vw ), 40px ) );
+	bottom: calc( -2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
 	background: var( --wp--preset--color--custom-light-blue-primary );
 }
 /* The team lead (First person in the list) */
