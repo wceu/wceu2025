@@ -76,6 +76,9 @@ body:has(.blend-element.has-custom-light-blue-primary-background-color) header.w
 body:has(.blend-element.has-custom-orange-primary-background-color) header.wp-block-template-part > .wp-block-group.has-background {
 	background: linear-gradient( 90deg, var( --wp--preset--color--custom-orange-primary ) 45% , var( --wp--preset--color--base-2 ) 45% ) !important;
 }
+body:has(.blend-element.has-custom-yellow-secondary-background-color) header.wp-block-template-part > .wp-block-group.has-background {
+	background: linear-gradient( 90deg, var( --wp--preset--color--custom-yellow-secondary ) 45% , var( --wp--preset--color--base-2 ) 45% ) !important;
+}
 
 .second-row .wp-block-spacer {
 	height: clamp( 60px, calc( 60px + 7.5vw ), 180px ) !important; /* we need important, because the spacer has a fixed height */
