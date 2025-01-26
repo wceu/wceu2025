@@ -465,6 +465,10 @@ p.wc25-p-large-bold-small {
 	cursor: pointer;
 }
 
+.tix-js #tix-coupon-input {
+	font-size: 1.2rem;
+	padding: 13px;
+}
 /* END Camptix block - tickets page */
 
 
