@@ -50,7 +50,8 @@
 }
 
 /* Remove spacing from the top of the post content */
-:where(.wp-site-blocks) > .wp-block-post-content {
+:where(.wp-site-blocks) > .wp-block-post-content,
+:where(.wp-site-blocks) > :has(.wp-block-post-content) {
 	margin-block-start: 0;
 }
 
