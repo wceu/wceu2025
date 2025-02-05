@@ -561,6 +561,7 @@ p.wc25-p-large-bold-small {
 .wordcamp-organizer .wordcamp-organizers__title {
 	margin: 0;
 	order: 2; /* Show the name of the organizer after the avatar */
+	font-size: var(--wp--preset--font-size--large) !important;
 }
 
 .wordcamp-organizer .wordcamp-image__avatar-container {
@@ -597,17 +598,17 @@ p.wc25-p-large-bold-small {
 	bottom: calc( -2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
 	background: var( --wp--preset--color--custom-light-blue-primary );
 }
+
 /* The team lead (First person in the list) */
-.wordcamp-organizer:first-child .wordcamp-image__avatar-container {
+.wordcamp-post-list__post:first-child .wordcamp-organizer .wordcamp-image__avatar-container {
 	border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
 }
-.wordcamp-organizer:first-child .wordcamp-image__avatar-container:before {
+.wordcamp-post-list__post:first-child .wordcamp-organizer .wordcamp-image__avatar-container:before {
 	background-color: var( --wp--preset--color--custom-pink-secondary );
 }
-.wordcamp-organizer:first-child .wordcamp-image__avatar-container:after {
+.wordcamp-post-list__post:first-child .wordcamp-organizer .wordcamp-image__avatar-container:after {
 	background-color: var( --wp--preset--color--custom-orange-primary );
 }
-
 
 /* The Lead Organizes (Needs the classname "team-lead-organizers" on the list or some parent block */
 .team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container {
