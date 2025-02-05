@@ -49,6 +49,11 @@
 	 */
 }
 
+/* Remove spacing from the top of the post content */
+:where(.wp-site-blocks) > .wp-block-post-content {
+	margin-block-start: 0;
+}
+
 .wp-block-group:has(>.blend-element) {
 	position: relative; /* the blend is element is absolute, so we need relative here */
 }
