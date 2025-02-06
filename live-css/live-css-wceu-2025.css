@@ -622,6 +622,17 @@ p.wc25-p-large-bold-small {
 	background-color: var( --wp--preset--color--custom-orange-primary );
 }
 
+/* The team co-lead (Second person in the list for selected teams) */
+.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container {
+	border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
+}
+.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:before {
+	background-color: var( --wp--preset--color--custom-pink-secondary );
+}
+.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:after {
+	background-color: var( --wp--preset--color--custom-orange-primary );
+}
+
 /* The Lead Organizes (Needs the classname "team-lead-organizers" on the list or some parent block */
 .team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container {
 	border-bottom-color: var( --wp--preset--color--custom-orange-primary ) !important;
