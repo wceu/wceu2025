@@ -564,6 +564,13 @@ p.wc25-p-large-bold-small {
     padding-left: 0;
 }
 
+/* Increase spacing between organizers */
+@media ( min-width: 400px ) {
+    .wordcamp-post-list.has-layout-grid {
+        gap: clamp( 20px, calc( 20px + 2.5vw ), 60px );
+    }
+}
+
  /* Display flex is needed, so we can easily change the order of name + avatar */
 .wordcamp-organizer {
 	display: flex;
