@@ -208,6 +208,18 @@ p.wc25-p-large-bold-small {
 
 /* Camptix block - tickets page */
 
+.tix_tickets_table input[type="text"],
+.tix_tickets_table input[type="url"],
+.tix_tickets_table input[type="email"],
+.tix_tickets_table select {
+	font-size: 1em;
+}
+
+.tix_tickets_table textarea {
+	font-size: 1em;
+	height: 4em;
+}
+
 /* Home smartphone rules */
 @media (max-width:767px) {
 	/*-- responsive ticket table --*/
