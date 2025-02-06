@@ -623,13 +623,16 @@ p.wc25-p-large-bold-small {
 }
 
 /* The team co-lead (Second person in the list for selected teams) */
-.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container {
+.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container,
+.team-design .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container{
 	border-bottom-color: var( --wp--preset--color--custom-pink-secondary );
 }
-.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:before {
+.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:before,
+.team-design .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:before {
 	background-color: var( --wp--preset--color--custom-pink-secondary );
 }
-.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:after {
+.team-communications .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:after,
+.team-design .wordcamp-post-list__post:nth-child(2) .wordcamp-organizer .wordcamp-image__avatar-container:after {
 	background-color: var( --wp--preset--color--custom-orange-primary );
 }
 
