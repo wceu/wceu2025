@@ -624,13 +624,13 @@ p.wc25-p-large-bold-small {
 
 /* The Lead Organizes (Needs the classname "team-lead-organizers" on the list or some parent block */
 .team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container {
-	border-bottom-color: var( --wp--preset--color--custom-orange-primary );
+	border-bottom-color: var( --wp--preset--color--custom-orange-primary ) !important;
 }
 .team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container:before {
-	background-color: var( --wp--preset--color--custom-orange-primary );
+	background-color: var( --wp--preset--color--custom-orange-primary ) !important;
 }
 .team-lead-organizers .wordcamp-organizer .wordcamp-image__avatar-container:after {
-	background-color: var( --wp--preset--color--custom-light-blue-primary );
+	background-color: var( --wp--preset--color--custom-light-blue-primary ) !important;
 }
 
 /* END of the Organizers */
