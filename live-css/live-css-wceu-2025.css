@@ -686,3 +686,103 @@ p.wc25-p-large-bold-small {
 .is-style-arrow-button.has-custom-black-primary-color::after {
 	background-image: url('https://europe.wordcamp.org/2025/files/2025/02/arrow-button-arrow-black.png');
 }
+
+/* Styles for buttons with a grid of colors, used primarily on frontpage */
+.is-style-color-grid-buttons {
+    gap: clamp(10px, calc(10px + 0.625vw), 20px);
+    font-size: clamp(14px, calc(14px + 0.375vw), 20px);
+
+    .wp-block-button {
+        position: relative;
+        flex-grow: 1;
+        transition: transform 120ms ease-in-out;
+    }
+    .wp-block-button::before,
+    .wp-block-button::after {
+        content: " ";
+        position: absolute;
+        z-index: 1;
+    }
+    .wp-block-button::before {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: clamp(8px, calc(8px + 0.5vw), 16px);
+        transform-origin: left;
+        transition: transform 120ms ease-in-out;
+    }
+    .wp-block-button::after {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: clamp(8px, calc(8px + 0.5vw), 16px);
+        mix-blend-mode: multiply;
+    }
+
+    .wp-block-button:hover {
+        transform: translate3d( 1px, -1px, 0);
+    }
+    .wp-block-button:hover::before {
+        transform: scaleX(2);
+    }
+
+	/* Different colors the buttons */
+    .wp-block-button:nth-child(4n+1)::before {
+        background-color: var( --wp--preset--color--custom-light-blue-primary );
+    }
+    .wp-block-button:nth-child(4n+1)::after {
+        background-color: var( --wp--preset--color--custom-orange-primary );
+    }
+    .wp-block-button:nth-child(4n+2)::before {
+        background-color: var( --wp--preset--color--custom-pink-secondary );
+    }
+    .wp-block-button:nth-child(4n+2)::after {
+        background-color: var( --wp--preset--color--custom-yellow-secondary );
+    }
+    .wp-block-button:nth-child(4n+3)::before {
+        background-color: var( --wp--preset--color--custom-yellow-secondary );
+    }
+    .wp-block-button:nth-child(4n+3)::after {
+        background-color: var( --wp--preset--color--custom-orange-primary );
+    }
+    .wp-block-button:nth-child(4n)::before {
+        background-color: var( --wp--preset--color--custom-pink-secondary );
+    }
+    .wp-block-button:nth-child(4n)::after {
+        background-color: var( --wp--preset--color--custom-orange-primary );
+    }
+
+    .wp-block-button__link {
+        position: relative;
+        padding-left: clamp(20px, calc(0px + 6.25vw), 100px);
+        padding-right: calc( clamp(20px, calc(0px + 6.25vw), 100px) + 2em );
+        padding-top: clamp(10px, calc(10px + 0.625vw), 20px);
+        padding-bottom: calc( clamp(10px, calc(10px + 0.625vw), 20px) + clamp(8px, calc(8px + 0.5vw), 16px) );
+        font-size: 1em;
+        /* add white background for the bottom color item. otherwhise we'd get a dirty color, because of mix-blend-mode: multiply in combination with grey background */
+        background-image: linear-gradient(0deg, #fff clamp(8px, calc(8px + 0.5vw), 16px), #fff clamp(8px, calc(8px + 0.5vw), 16px), transparent 10px);
+    }
+    .wp-block-button__link::after {
+        content: " ";
+        position: absolute;
+        right: clamp(10px, calc(10px + 0.625vw), 20px);
+        top: 50%;
+        margin-top: calc( -0.5 * clamp(8px, calc(8px + 0.5vw), 16px) );
+        width: 2em;
+        height: 2em;
+        background-image: url('https://europe.wordcamp.org/2025/files/2025/02/arrow-button-arrow-black-on-white.png');
+        background-size: cover;
+        transform: translate3d( 0, -50%, 0 );
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+    .is-style-color-grid-buttons .wp-block-button {
+        flex-basis: calc( 50% - clamp(10px, calc(10px + 0.625vw), 20px) );
+    }
+}
+@media screen and (min-width: 1000px) {
+    .is-style-color-grid-buttons .wp-block-button {
+        flex-basis: calc( 33% - ( clamp(10px, calc(10px + 0.625vw), 20px) / 3 * 2 ) );
+    }
+}
