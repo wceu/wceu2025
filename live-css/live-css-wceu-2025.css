@@ -659,16 +659,13 @@ p.wc25-p-large-bold-small {
 
 /* Button Styles. To start with an extra class, maybe later, we'll apply this to all buttons */
 
-.is-style-arrow-button {
-    position: relative;
-}
-
 .is-style-arrow-button a {
+    position: relative;
 	/* 1.5rem from the button padding, 1.25em for the width of the arrow, and .75em for the space between the arrow and the text */
     padding-right: calc( 1.5rem + 1.25em + .75em );
 }
 
-.is-style-arrow-button::after {
+.is-style-arrow-button a::after {
 	content: " ";
 	position: absolute;
 	top: 50%;
@@ -683,9 +680,14 @@ p.wc25-p-large-bold-small {
 }
 
 /* Use dark arrow, if the button has the black primary color */
-.is-style-arrow-button.has-custom-black-primary-color::after {
+.is-style-arrow-button a.has-custom-black-primary-color::after {
 	background-image: url('https://europe.wordcamp.org/2025/files/2025/02/arrow-button-arrow-black.png');
 }
+/* Use orange arrow, if the button has the orange primary color */
+.is-style-arrow-button a.has-custom-orange-primary-color::after {
+	background-image: url('https://europe.wordcamp.org/2025/files/2025/02/arrow-button-arrow-orange.png');
+}
+
 
 /* Styles for buttons with a grid of colors, used primarily on frontpage */
 .is-style-color-grid-buttons {
