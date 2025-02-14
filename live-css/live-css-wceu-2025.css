@@ -208,6 +208,10 @@ p.wc25-p-large-bold-small {
 
 /* Camptix block - tickets page */
 
+.tix_tickets_table {
+	border-spacing: 0;
+    border-collapse: collapse;
+}
 .tix_tickets_table input[type="text"],
 .tix_tickets_table input[type="url"],
 .tix_tickets_table input[type="email"],
@@ -263,7 +267,7 @@ p.wc25-p-large-bold-small {
 		font-weight: bold;
 		display: block;
 		width: auto;
-		background: #86b3d7;
+		background: var( --wp--preset--color--custom-light-blue-primary );
 		padding: 10px 20px;
 	}
 
@@ -346,9 +350,8 @@ p.wc25-p-large-bold-small {
 }
 
 .tix-js .tix_tickets_table thead th {
-	background-color: #86b3d7;
+	background-color: var( --wp--preset--color--custom-light-blue-primary );
 	font-weight: bold;
-	color: #fff;
 }
 
 .tix-js .tix_tickets_table tbody .tix-ticket-title {
@@ -476,9 +479,9 @@ p.wc25-p-large-bold-small {
 .tix-checkout-button {
 	font-size: 1.2rem;
 	margin-top: 2rem;
-	border: 2px solid #86b3d7 !important;
+	border: 2px solid var( --wp--preset--color--custom-light-blue-primary ) !important;
 	padding: 15px 30px !important;
-	background-color: #86b3d7;
+	background-color: var( --wp--preset--color--custom-light-blue-primary );
 	color: #000;
 	text-transform: uppercase;
 	cursor: pointer;
