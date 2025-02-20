@@ -781,6 +781,9 @@ p.wc25-p-large-bold-small {
 	background-size: cover;
 	transform: translate3d( 0, -50%, 0 );
 }
+.is-style-color-grid-buttons .wp-block-button__link:hover::after {
+	background-image: url('https://europe.wordcamp.org/2025/files/2025/02/arrow-button-arrow-orange-on-white.png');
+}
 
 @media screen and (min-width: 500px) and (max-width: 999px) {
     .is-style-color-grid-buttons .wp-block-button {
