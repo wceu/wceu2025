@@ -795,3 +795,24 @@ p.wc25-p-large-bold-small {
         flex-basis: calc( 33% - ( clamp(10px, calc(10px + 0.625vw), 20px) / 3 * 2 ) );
     }
 }
+
+
+/* Some styles for mix-blend-mode on different elements */
+.is-style-mbm-left-yellow {
+    position: relative;
+}
+.is-style-mbm-left-yellow::before {
+    content: " ";
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    left: 0;
+    width: var( --wp--preset--spacing--40 );
+    height: 100%;
+    background: var( --wp--preset--color--custom-yellow-secondary );
+    mix-blend-mode: multiply;
+}
+
+.is-style-mbm-left-yellow .wp-block-image {
+    margin-left: var( --wp--preset--spacing--40 );
+}
