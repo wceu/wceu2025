@@ -261,6 +261,13 @@ p.wc25-p-large-bold-small {
 		white-space: nowrap;
 	}
 
+	.tix-column-remaining::before {
+		content: "Remaining: "
+	}
+	.tix-column-quantity::before {
+		content: "Quantity: "
+	}
+
 	.tix-tickets-list .tix-column-description {
 		padding: 0 !important;
 		border: 0;
