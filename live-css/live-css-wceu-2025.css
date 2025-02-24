@@ -390,7 +390,8 @@ p.wc25-p-large-bold-small {
 	padding: 5px 20px;
 }
 
-.tix-js .tix_tickets_table tbody th {
+.tix-js .tix_tickets_table tbody th,
+.tix-js .tix_tickets_table th.tix-column-description {
 	text-align: left;
 }
 
