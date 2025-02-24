@@ -232,20 +232,20 @@ p.wc25-p-large-bold-small {
 	}
 
 	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr {
+	.tix_tickets_table thead tr {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
 
-	td {
+	.tix_tickets_table td {
 	/* Behave  like a "row" */
 		border: 0;
 		position: relative;
 		padding-left: 50%;
 	}
 
-	td:before {
+	.tix_tickets_table td:before {
 	/* Now like a table header */
 		position: absolute;
 	/* Top/left values mimic padding */
