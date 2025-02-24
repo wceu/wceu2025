@@ -227,7 +227,12 @@ p.wc25-p-large-bold-small {
 /* Home smartphone rules */
 @media (max-width:767px) {
 	/*-- responsive ticket table --*/
-	.tix_tickets_table table, thead, tbody, th, td, tr {
+	.tix_tickets_table table,
+	.tix_tickets_table thead,
+	.tix_tickets_table tbody,
+	.tix_tickets_table th,
+	.tix_tickets_table td,
+	.tix_tickets_table tr {
 		display: block;
 	}
 
