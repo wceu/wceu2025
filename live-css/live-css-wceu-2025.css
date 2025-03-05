@@ -941,15 +941,19 @@ p.wc25-p-large-bold-small {
 	background-size: cover;
 }
 
-#tix-attendees .tix-attendee-list li:nth-child(2n)::before {
+#tix-attendees .tix-attendee-list li:nth-child(4n+1)::before {
+	transform: rotate(0deg);
+}
+
+#tix-attendees .tix-attendee-list li:nth-child(4n+2)::before {
 	transform: rotate(90deg);
 }
 
-#tix-attendees .tix-attendee-list li:nth-child(3n)::before {
+#tix-attendees .tix-attendee-list li:nth-child(4n+3)::before {
 	transform: rotate(180deg);
 }
 
-#tix-attendees .tix-attendee-list li:nth-child(5n)::before {
+#tix-attendees .tix-attendee-list li:nth-child(4n)::before {
 	transform: rotate(270deg);
 }
 
