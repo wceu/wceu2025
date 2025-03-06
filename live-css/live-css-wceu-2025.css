@@ -853,7 +853,7 @@ p.wc25-p-large-bold-small {
 
 #tix-attendees .tix-attendee-list {
 	display: grid;
-	grid-template-columns: repeat( auto-fill, minmax( 192px, 1fr ) );
+	grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
 	gap: 20px;
 	padding: 0;
 	margin: 0;
@@ -869,6 +869,7 @@ p.wc25-p-large-bold-small {
 	float: none;
 	position: relative;
 	align-items: center;
+	padding-bottom: 40px;
 }
 
 #tix-attendees .tix-attendee-list li img {
@@ -958,19 +959,34 @@ p.wc25-p-large-bold-small {
 }
 
 #tix-attendees .tix-attendee-url {
-	margin-top: 10px;
+	margin-top: 0;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
 	visibility: hidden;
 	text-align: center;
-	margin-right: 0px;
-	margin-left: 0px;
-	font-size: 0px;
+	margin-right: 0;
+	margin-left: 0;
+	font-size: 0;
+}
+
+#tix-attendees .tix-wordpress-org-profile-url::before {
+	margin-right: 42px; /* Space between icons */
+}
+
+/* Apply margin-left only if this link is preceded by a WordPress.org profile link */
+#tix-attendees .tix-wordpress-org-profile-url + .tix-company-or-personal-website::before {
+	margin-left: 42px; /* Space between icons */
 }
 
 #tix-attendees .tix-attendee-url:before {
-	background: url(//europe.wordcamp.org/2025/files/2025/03/website.png) no-repeat center center;
+	background: url('//europe.wordcamp.org/2025/files/2025/03/website.png') no-repeat center center;
 	background-size: contain;
 	content: "";
 	display: inline-block;
+	position: static;
 	visibility: visible;
 	height: 24px;
 	width: 24px;
@@ -980,7 +996,8 @@ p.wc25-p-large-bold-small {
 #tix-attendees a[href^="http://profiles.wordpress.org"]:before,
 #tix-attendees a[href^="https://profile.wordpress.org"]:before,
 #tix-attendees a[href^="https://profiles.wordpress.org"]:before {
-	background: url(//europe.wordcamp.org/2025/files/2025/03/wordpress.png) no-repeat center center;
+	background: url('//europe.wordcamp.org/2025/files/2025/03/wordpress.png') no-repeat center center;
 	background-size: contain;
 }
 /* END of the Tix Attendees */
+
