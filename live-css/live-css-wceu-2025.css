@@ -972,18 +972,7 @@ p.wc25-p-large-bold-small {
 	font-size: 0;
 }
 
-#tix-attendees .tix-wordpress-org-profile-url::before {
-	margin-right: 42px; /* Space between icons */
-}
-
-/* Apply margin-left only if this link is preceded by a WordPress.org profile link */
-#tix-attendees .tix-wordpress-org-profile-url + .tix-company-or-personal-website::before {
-	margin-left: 42px; /* Space between icons */
-}
-
 #tix-attendees .tix-attendee-url:before {
-	background: url('//europe.wordcamp.org/2025/files/2025/03/website.png') no-repeat center center;
-	background-size: contain;
 	content: "";
 	display: inline-block;
 	position: static;
@@ -992,12 +981,24 @@ p.wc25-p-large-bold-small {
 	width: 24px;
 }
 
-#tix-attendees a[href^="http://profile.wordpress.org"]:before,
-#tix-attendees a[href^="http://profiles.wordpress.org"]:before,
-#tix-attendees a[href^="https://profile.wordpress.org"]:before,
-#tix-attendees a[href^="https://profiles.wordpress.org"]:before {
+#tix-attendees .tix-wordpress-org-profile-url:has(+ .tix-company-or-personal-website)::before {
+	margin-right: 42px;
+/* Space between icons */
+}
+
+/* Apply margin-left only if this link is preceded by a WordPress.org profile link */
+#tix-attendees .tix-wordpress-org-profile-url + .tix-company-or-personal-website::before {
+	margin-left: 42px;
+/* Space between icons */
+}
+
+#tix-attendees .tix-company-or-personal-website:before {
+	background: url('//europe.wordcamp.org/2025/files/2025/03/website.png') no-repeat center center;
+	background-size: contain;
+}
+
+#tix-attendees .tix-wordpress-org-profile-url:before {
 	background: url('//europe.wordcamp.org/2025/files/2025/03/wordpress.png') no-repeat center center;
 	background-size: contain;
 }
 /* END of the Tix Attendees */
-
