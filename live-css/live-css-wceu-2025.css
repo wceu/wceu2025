@@ -1070,4 +1070,24 @@ p.wc25-p-large-bold-small {
 	background-color: var(--wp--preset--color--custom-orange-primary);
 }
 
+/* Single view of speaker */
+.single-wcb_speaker .wp-block-wordcamp-avatar {
+	width: 100% !important;
+	height: auto !important;
+	border-radius: 0;
+}
+
+.single-wcb_speaker .wp-block-wordcamp-avatar img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 0;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+
+.single-speaker-color-stack {
+	height: 100%;
+}
+
 /* END of Speakers */
