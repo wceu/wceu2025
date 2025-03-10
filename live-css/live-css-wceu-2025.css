@@ -210,7 +210,7 @@ p.wc25-p-large-bold-small {
 
 .tix_tickets_table {
 	border-spacing: 0;
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 .tix_tickets_table input[type="text"],
 .tix_tickets_table input[type="url"],
@@ -593,14 +593,14 @@ p.wc25-p-large-bold-small {
 
 /* The list of organizers uses an <ul>, which has a default padding left, so we need to set this to 0 */
 .wordcamp-organizers {
-    padding-left: 0;
+	padding-left: 0;
 }
 
 /* Increase spacing between organizers */
 @media ( min-width: 400px ) {
-    .wordcamp-post-list.has-layout-grid {
-        gap: clamp( 20px, calc( 20px + 2.5vw ), 60px );
-    }
+	.wordcamp-post-list.has-layout-grid {
+		gap: clamp( 20px, calc( 20px + 2.5vw ), 60px );
+	}
 }
 
  /* Display flex is needed, so we can easily change the order of name + avatar */
@@ -646,10 +646,10 @@ p.wc25-p-large-bold-small {
 .wordcamp-organizer .wordcamp-image__avatar-container::after {
 	right: 0;
 	width: 25%;
-    bottom: calc( -2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
-    height: calc( 2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
+	bottom: calc( -2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
+	height: calc( 2 * clamp( 16px, calc( 8px + 2vw ), 40px ) );
 	background: var( --wp--preset--color--custom-pink-secondary );
-    mix-blend-mode: multiply;
+	mix-blend-mode: multiply;
 }
 
 /* The team lead (First person in the list) */
@@ -694,9 +694,9 @@ p.wc25-p-large-bold-small {
 /* Button Styles. To start with an extra class, maybe later, we'll apply this to all buttons */
 
 .is-style-arrow-button a {
-    position: relative;
+	position: relative;
 	/* 1.5rem from the button padding, 1.25em for the width of the arrow, and .75em for the space between the arrow and the text */
-    padding-right: calc( 1.5rem + 1.25em + .75em );
+	padding-right: calc( 1.5rem + 1.25em + .75em );
 }
 
 .is-style-arrow-button a::after {
@@ -725,8 +725,8 @@ p.wc25-p-large-bold-small {
 
 /* Styles for buttons with a grid of colors, used primarily on frontpage */
 .is-style-color-grid-buttons {
-    gap: clamp(10px, calc(10px + 0.625vw), 20px);
-    font-size: clamp(14px, calc(14px + 0.375vw), 20px);
+	gap: clamp(10px, calc(10px + 0.625vw), 20px);
+	font-size: clamp(14px, calc(14px + 0.375vw), 20px);
 }
 .is-style-color-grid-buttons .wp-block-button {
 	position: relative;
@@ -815,35 +815,35 @@ p.wc25-p-large-bold-small {
 }
 
 @media screen and (min-width: 500px) and (max-width: 999px) {
-    .is-style-color-grid-buttons .wp-block-button {
-        flex-basis: calc( 50% - clamp(10px, calc(10px + 0.625vw), 20px) );
-    }
+	.is-style-color-grid-buttons .wp-block-button {
+		flex-basis: calc( 50% - clamp(10px, calc(10px + 0.625vw), 20px) );
+	}
 }
 @media screen and (min-width: 1000px) {
-    .is-style-color-grid-buttons .wp-block-button {
-        flex-basis: calc( 33% - ( clamp(10px, calc(10px + 0.625vw), 20px) / 3 * 2 ) );
-    }
+	.is-style-color-grid-buttons .wp-block-button {
+		flex-basis: calc( 33% - ( clamp(10px, calc(10px + 0.625vw), 20px) / 3 * 2 ) );
+	}
 }
 
 
 /* Some styles for mix-blend-mode on different elements */
 .is-style-mbm-left-yellow {
-    position: relative;
+	position: relative;
 }
 .is-style-mbm-left-yellow::before {
-    content: " ";
-    position: absolute;
-    z-index: 9;
-    bottom: 0;
-    left: 0;
-    width: var( --wp--preset--spacing--40 );
-    height: 100%;
-    background: var( --wp--preset--color--custom-yellow-secondary );
-    mix-blend-mode: multiply;
+	content: " ";
+	position: absolute;
+	z-index: 9;
+	bottom: 0;
+	left: 0;
+	width: var( --wp--preset--spacing--40 );
+	height: 100%;
+	background: var( --wp--preset--color--custom-yellow-secondary );
+	mix-blend-mode: multiply;
 }
 
 .is-style-mbm-left-yellow .wp-block-image {
-    margin-left: var( --wp--preset--spacing--40 );
+	margin-left: var( --wp--preset--spacing--40 );
 }
 
 /* START of the Tix Attendees. */
@@ -1002,3 +1002,72 @@ p.wc25-p-large-bold-small {
 	background-size: contain;
 }
 /* END of the Tix Attendees */
+
+
+/* START of Speakers */
+.wp-block-post-template .type-wcb_speaker .wp-block-wordcamp-avatar {
+	position: relative;
+	width: 100% !important;
+	height: auto !important;
+	border-radius: 0;
+	border-bottom: clamp( 16px, calc( 8px + 2vw ), 40px ) solid #000;
+}
+
+.wp-block-post-template .type-wcb_speaker .wp-block-wordcamp-avatar::before {
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 33.3333333333%;
+	height: clamp( 16px, calc( 8px + 2vw ), 40px );
+}
+
+.wp-block-post-template .type-wcb_speaker img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 0;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+
+/* Different colors for the speakers, repating every 6th speaker */
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+1) .wp-block-wordcamp-avatar {
+	border-bottom-color: var( --wp--preset--color--contrast );
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+2) .wp-block-wordcamp-avatar {
+	border-bottom-color: var(--wp--preset--color--custom-light-blue-primary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+3) .wp-block-wordcamp-avatar {
+	border-bottom-color: var(--wp--preset--color--custom-pink-secondary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+4) .wp-block-wordcamp-avatar {
+	border-bottom-color: var(--wp--preset--color--custom-light-blue-primary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+5) .wp-block-wordcamp-avatar {
+	border-bottom-color: var(--wp--preset--color--custom-orange-primary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+6) .wp-block-wordcamp-avatar {
+	border-bottom-color: var(--wp--preset--color--custom-pink-secondary);
+}
+
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+1) .wp-block-wordcamp-avatar::before {
+	background-color: var(--wp--preset--color--custom-yellow-secondary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+2) .wp-block-wordcamp-avatar::before {
+	background-color: var(--wp--preset--color--custom-yellow-secondary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+3) .wp-block-wordcamp-avatar::before {
+	background-color: var(--wp--preset--color--custom-yellow-secondary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+4) .wp-block-wordcamp-avatar::before {
+	background-color: var(--wp--preset--color--custom-yellow-secondary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+5) .wp-block-wordcamp-avatar::before {
+	background-color: var(--wp--preset--color--custom-pink-secondary);
+}
+.wp-block-post-template .type-wcb_speaker:nth-child(6n+6) .wp-block-wordcamp-avatar::before {
+	background-color: var(--wp--preset--color--custom-orange-primary);
+}
+
+/* END of Speakers */
