@@ -60,6 +60,13 @@
 	position: relative; /* the blend is element is absolute, so we need relative here */
 }
 
+/* Remove outline on parent menu element in mobile menu, which was visible for a split second, when tapping a child link */
+@media (max-width: 599px) {
+    .wp-block-navigation .wp-block-navigation-item:focus {
+        outline: none;
+    }
+}
+
 /* The blend element, which overlays some of the colors */
 .blend-element {
 	position: absolute;
