@@ -1088,6 +1088,7 @@ p.wc25-p-large-bold-small {
 .single-wcb_speaker .wp-block-wordcamp-avatar img {
 	display: block;
 	width: 60%;
+	height: auto;
 	border-radius: 0;
 }
 
