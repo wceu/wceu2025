@@ -884,41 +884,42 @@ p.wc25-p-large-bold-small {
 	height: auto;
 	display: block;
 	z-index: 1;
-	outline-width: 6px;
-	outline-style: solid;
+	/* outline-width: 6px; */
+	/* outline-style: solid; */
 }
 
 /* Pink outline for 1st, 5th, 9th, etc. attendees */
-#tix-attendees .tix-attendee-list li:nth-child(16n+1) img,
+/* #tix-attendees .tix-attendee-list li:nth-child(16n+1) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+2) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+3) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+4) img {
 	outline-color: var(--wp--preset--color--custom-pink-secondary);
 }
+ */
 
-/* Blue outline for 2nd, 6th, 10th, etc. attendees */
-#tix-attendees .tix-attendee-list li:nth-child(16n+5) img,
+ /* Blue outline for 2nd, 6th, 10th, etc. attendees */
+/* #tix-attendees .tix-attendee-list li:nth-child(16n+5) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+6) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+7) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+8) img {
 	outline-color: var(--wp--preset--color--custom-light-blue-primary);
-}
+} */
 
 /* Yellow outline for 3rd, 7th, 11th, etc. attendees */
-#tix-attendees .tix-attendee-list li:nth-child(16n+9) img,
+/* #tix-attendees .tix-attendee-list li:nth-child(16n+9) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+10) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+11) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+12) img {
 	outline-color: var(--wp--preset--color--custom-yellow-secondary);
-}
+} */
 
 /* Orange outline for 4th, 8th, 12th, etc. attendees */
-#tix-attendees .tix-attendee-list li:nth-child(16n+13) img,
+/* #tix-attendees .tix-attendee-list li:nth-child(16n+13) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+14) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+15) img,
 #tix-attendees .tix-attendee-list li:nth-child(16n+0) img {
 	outline-color: var(--wp--preset--color--custom-orange-primary);
-}
+} */
 
 #tix-attendees .tix-attendee-list li .tix-attendee-name {
 	display: block;
@@ -1079,7 +1080,7 @@ p.wc25-p-large-bold-small {
 
 /* Single view of speaker */
 .single-wcb_speaker .wp-block-wordcamp-avatar {
-    position: relative;
+	position: relative;
 	width: 100% !important;
 	height: auto !important;
 	border-radius: 0;
@@ -1094,20 +1095,20 @@ p.wc25-p-large-bold-small {
 
 .single-wcb_speaker .wp-block-wordcamp-avatar::before,
 .single-wcb_speaker .wp-block-wordcamp-avatar::after {
-    content: " ";
-    position: absolute;
-    right: 0;
-    width: 40%;
+	content: " ";
+	position: absolute;
+	right: 0;
+	width: 40%;
 }
 .single-wcb_speaker .wp-block-wordcamp-avatar::before {
-    top: 0;
-    height: 60%;
-    background-color: var(--wp--preset--color--custom-pink-secondary);
+	top: 0;
+	height: 60%;
+	background-color: var(--wp--preset--color--custom-pink-secondary);
 }
 .single-wcb_speaker .wp-block-wordcamp-avatar::after {
-    bottom: 0;
-    height: 40%;
-    background-color: var(--wp--preset--color--custom-orange-primary);
+	bottom: 0;
+	height: 40%;
+	background-color: var(--wp--preset--color--custom-orange-primary);
 }
 
 .single-speaker-color-stack {
