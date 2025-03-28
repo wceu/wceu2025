@@ -62,9 +62,9 @@
 
 /* Remove outline on parent menu element in mobile menu, which was visible for a split second, when tapping a child link */
 @media (max-width: 599px) {
-    .wp-block-navigation .wp-block-navigation-item:focus {
-        outline: none;
-    }
+	.wp-block-navigation .wp-block-navigation-item:focus {
+		outline: none;
+	}
 }
 
 /* The blend element, which overlays some of the colors */
@@ -1116,3 +1116,33 @@ p.wc25-p-large-bold-small {
 }
 
 /* END of Speakers */
+
+
+/* START of Schedule */
+.wordcamp-schedule .wordcamp-schedule__day {
+	grid-gap: 2px;
+	background: #FFF;
+}
+
+.wordcamp-schedule .wordcamp-schedule__column-header {
+	padding: clamp( 8px, calc( 4px + 1vw ), 16px ) clamp( 12px, calc( 6px + 1.5vw ), 24px ) !important;
+	background: #FFEB7F !important;
+}
+
+.wordcamp-schedule .wordcamp-schedule__session,
+.wordcamp-schedule .wordcamp-schedule__time-slot-header {
+	padding: clamp( 12px, calc( 6px + 1.5vw ), 24px );
+	background-color: #FFF5BF !important;
+	border: none;
+	box-shadow: none !important;
+	font-size: clamp( 14px, calc( 13px + 0.25vw ), 16px );
+}
+
+.wordcamp-schedule p:has( + .wordcamp-schedule__session-speakers ) {
+	margin-bottom: .25em;
+}
+.wordcamp-schedule .wordcamp-schedule__session-speakers {
+	margin-top: 0;
+	font-weight: 600;
+}
+/* END of Schedule */
