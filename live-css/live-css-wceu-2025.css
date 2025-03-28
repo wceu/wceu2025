@@ -1117,6 +1117,28 @@ p.wc25-p-large-bold-small {
 
 /* END of Speakers */
 
+/* START of Sessions */
+
+.wp-block-wordcamp-speaker-sessions {
+    margin-top: 0;
+}
+
+.wp-block-wordcamp-speaker-sessions p:first-child {
+    margin-top: 0.25em;
+}
+.wp-block-wordcamp-speaker-sessions p:last-child {
+    margin-bottom: 0;
+}
+
+.wp-block-wordcamp-speaker-sessions a {
+    font-size: var(--wp--preset--font-size--large);
+    font-weight: 700;
+}
+.wordcamp-speaker-sessions__session-info {
+    margin-top: .5em;
+}
+
+/* END of Sessions */
 
 /* START of Schedule */
 .wordcamp-schedule .wordcamp-schedule__day {
