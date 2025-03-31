@@ -1170,4 +1170,11 @@ p.wc25-p-large-bold-small {
 	margin-top: 0;
 	font-weight: 600;
 }
+
+@media screen and (min-width: 550px) {
+	.wordcamp-schedule:not(.is-style-single-column-layout) .wordcamp-schedule__session.is-spanning-some-tracks .wordcamp-schedule__session-title {
+		justify-content: center;
+		text-align: center;
+	}
+}
 /* END of Schedule */
