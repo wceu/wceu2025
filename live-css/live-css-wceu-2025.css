@@ -1120,22 +1120,22 @@ p.wc25-p-large-bold-small {
 /* START of Sessions */
 
 .wp-block-wordcamp-speaker-sessions {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .wp-block-wordcamp-speaker-sessions p:first-child {
-    margin-top: 0.25em;
+	margin-top: 0.25em;
 }
 .wp-block-wordcamp-speaker-sessions p:last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .wp-block-wordcamp-speaker-sessions a {
-    font-size: var(--wp--preset--font-size--large);
-    font-weight: 700;
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 700;
 }
 .wordcamp-speaker-sessions__session-info {
-    margin-top: .5em;
+	margin-top: .5em;
 }
 
 /* END of Sessions */
@@ -1147,8 +1147,8 @@ p.wc25-p-large-bold-small {
 }
 
 .wordcamp-schedule .wordcamp-schedule__column-header {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 	padding: clamp( 8px, calc( 4px + 1vw ), 16px ) clamp( 12px, calc( 6px + 1.5vw ), 24px ) !important;
 	background: #FFEB7F !important;
 	border: 1px solid #FFFFFF !important;
@@ -1169,6 +1169,19 @@ p.wc25-p-large-bold-small {
 .wordcamp-schedule .wordcamp-schedule__session-speakers {
 	margin-top: 0;
 	font-weight: 600;
+}
+
+/* Favorites solution */
+.wcb-favourite-session .wcb-session-favourite-icon a.fav-session-button,
+.wordcamp-schedule div.wcb-session-favourite-icon a.fav-session-button:hover,
+.wordcamp-schedule div.wcb-session-favourite-icon a.fav-session-button:focus:hover,
+.wordcamp-schedule .wcb-favourite-session div.wcb-session-favourite-icon a.fav-session-button:focus {
+	color: #ffb900;
+}
+
+.wordcamp-schedule .wcb-favourite-session div.wcb-session-favourite-icon a.fav-session-button:hover,
+.wordcamp-schedule div.wcb-session-favourite-icon a.fav-session-button:focus {
+	color: #aaa;
 }
 
 @media screen and (min-width: 550px) {
