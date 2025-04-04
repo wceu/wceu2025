@@ -1184,6 +1184,13 @@ p.wc25-p-large-bold-small {
 	color: #aaa;
 }
 
+/* To enable background-color on favourite sessions, uncomment the following lines */
+/*
+.wordcamp-schedule .wordcamp-schedule__session.wcb-favourite-session {
+	background-color: var(--wp--preset--color--custom-white-secondary) !important;
+}
+*/
+
 @media screen and (min-width: 550px) {
 	.wordcamp-schedule:not(.is-style-single-column-layout) .wordcamp-schedule__session.is-spanning-some-tracks .wordcamp-schedule__session-title {
 		justify-content: center;
