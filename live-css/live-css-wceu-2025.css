@@ -1166,7 +1166,7 @@ p.wc25-p-large-bold-small {
 .wordcamp-schedule .wordcamp-schedule__session,
 .wordcamp-schedule .wordcamp-schedule__time-slot-header {
 	padding: clamp( 12px, calc( 6px + 1.5vw ), 24px );
-	background-color: #FFF5BF !important;
+	background-color: #fff8cf !important;
 	border: 1px solid #FFFFFF !important;
 	box-shadow: none !important;
 	font-size: clamp( 14px, calc( 13px + 0.25vw ), 16px );
