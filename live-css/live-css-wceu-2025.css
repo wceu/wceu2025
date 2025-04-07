@@ -1154,6 +1154,15 @@ p.wc25-p-large-bold-small {
 	border: 1px solid #FFFFFF !important;
 }
 
+/* use blue color for the column header of the first day */
+#wordcamp-schedule__day-2025-06-06-tracks-all .wordcamp-schedule__column-header {
+    background: var(--wp--preset--color--custom-light-blue-primary) !important;
+}
+/* use pink color for the column header of the second day */
+#wordcamp-schedule__day-2025-06-07-tracks-all .wordcamp-schedule__column-header {
+    background: var(--wp--preset--color--custom-pink-secondary) !important;
+}
+
 .wordcamp-schedule .wordcamp-schedule__session,
 .wordcamp-schedule .wordcamp-schedule__time-slot-header {
 	padding: clamp( 12px, calc( 6px + 1.5vw ), 24px );
@@ -1184,12 +1193,10 @@ p.wc25-p-large-bold-small {
 	color: #aaa;
 }
 
-/* To enable background-color on favourite sessions, uncomment the following lines */
-/*
+/* Enable background-color on favourite sessions, use Yellow-60 */
 .wordcamp-schedule .wordcamp-schedule__session.wcb-favourite-session {
-	background-color: var(--wp--preset--color--custom-white-secondary) !important;
+	background-color: #fff09f !important;
 }
-*/
 
 @media screen and (min-width: 550px) {
 	.wordcamp-schedule:not(.is-style-single-column-layout) .wordcamp-schedule__session.is-spanning-some-tracks .wordcamp-schedule__session-title {
