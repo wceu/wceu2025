@@ -1208,3 +1208,8 @@ p.wc25-p-large-bold-small {
 	}
 }
 /* END of Schedule */
+
+/* Limit max-height of the footer logos */
+.footer-location-logos img {
+    max-height: 60px;
+}
