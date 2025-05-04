@@ -1211,5 +1211,6 @@ p.wc25-p-large-bold-small {
 
 /* Limit max-height of the footer logos */
 .footer-location-logos img {
+	width: auto;
     max-height: 60px;
 }
