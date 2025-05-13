@@ -622,6 +622,10 @@ p.wc25-p-large-bold-small {
 	font-size: var(--wp--preset--font-size--large) !important;
 }
 
+.wordcamp-organizer .wordcamp-organizers__content {
+    order: 3; /* Show the bio of the organizer (W.org profile link) after the title (name) */
+}
+
 .wordcamp-organizer .wordcamp-image__avatar-container {
 	margin-bottom: clamp( 16px, calc( 8px + 2vw ), 40px ); /* the size of the border-bottom of wordcamp-image__avatar-container */
 }
