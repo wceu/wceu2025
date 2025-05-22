@@ -702,8 +702,19 @@ p.wc25-p-large-bold-small {
 /* END of the Organizers */
 
 
-/* Button Styles. To start with an extra class, maybe later, we'll apply this to all buttons */
+/* Button Styles, General Hover Effect  */
+.wp-block-button__link {
+    transition: background-color 160ms ease-in-out, color 160ms ease-in-out;
+}
+.wp-block-buttons:not(.is-style-color-grid-buttons) .wp-block-button__link:hover {
+    color: #FFF !important;
+    background-color: var(--wp--preset--color--custom-black-primary) !important;
+}
+.wp-block-buttons:not(.is-style-color-grid-buttons) .wp-block-button__link.has-custom-black-primary-background-color:hover {
+    background-color: var(--wp--preset--color--custom-orange-primary) !important;
+}
 
+/* Button Styles with arrow. To start with an extra class, maybe later, we'll apply this to all buttons */
 .is-style-arrow-button a {
 	position: relative;
 	/* 1.5rem from the button padding, 1.25em for the width of the arrow, and .75em for the space between the arrow and the text */
